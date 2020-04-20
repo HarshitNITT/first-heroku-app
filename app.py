@@ -5,6 +5,6 @@ def hello_world():
     if request.method == 'POST':
         return str(int(request.get_json(force=True)['a'])+int(request.get_json(force=True)['b']))
     else:
-        return "Hello World"
+        return render_template('index.html')
 if __name__ == '__main__':
     app.run()
